@@ -37,10 +37,13 @@ export default class App extends Component {
                 sound: true
             },
             popInitialNotification: true,
-            // senderID: '949834818940', //only android
+            senderID: '949834818940', //only android
             requestPermissions: true
         });
+        PushNotification.onRegister();
+        // PushNotification.requestPermissions();
     }
+
     render() {
         return (
             <View style={styles.container}>
